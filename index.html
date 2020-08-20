@@ -13,14 +13,14 @@
     <!-- <script src="https://kit.fontawesome.com/ae46c9edb9.js" crossorigin="anonymous"></script> -->
 
     <!-- My CSS -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 
     <title>Hello, world!</title>
   </head>
   <body>
     <div class="container mt-5">
       <h1>Wallpaper Calculator</h1>
-      <form>
+      <form id="wallpaper-calculator">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="roll-width">Roll Width in cm</label>
@@ -33,17 +33,17 @@
           </div>
           <div class="form-group col-md-6">
             <label for="roll-length">Roll Length in meters</label>
-            <input type="text" class="form-control" id="roll-length" value="10.5" readonly>
+            <input type="text" class="form-control" id="roll-length" value="10.05" readonly>
           </div>
         </div>
         <div class="form-group">
           <div>Unit of Measurement</div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="meters" value="meters">
             <label class="form-check-label" for="inlineRadio1">Meters</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="feets" value="feets">
             <label class="form-check-label" for="inlineRadio2">Feet & Inches</label>
           </div>
         </div>
@@ -58,8 +58,10 @@
             <input type="number" min="0" class="form-control" id="wall-height">
           </div>
         </div>
-        <button type="submit" class="btn btn-primary" id="calculate-btn">Sign in</button>
+        <button type="submit" class="btn btn-primary" id="reset-btn">Reset</button>
+        <button type="submit" class="btn btn-primary" id="calculate-btn">Calculate Rolls Needed</button>
       </form>
+      <div id="result">Rolls Needed: <span></span></div>
     </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
