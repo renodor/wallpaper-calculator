@@ -16,3 +16,9 @@
 #result span {
   font-weight: bolder;
 }
+
+.add-wall-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
