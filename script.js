@@ -1,6 +1,6 @@
+const calculatorForm = document.getElementById('wallpaper-calculator');
 const calculateBtn = document.getElementById('calculate-btn');
 const resetBtn = document.getElementById('reset-btn');
-const calculatorForm = document.getElementById('wallpaper-calculator');
 const result = document.querySelector('#result span');
 const wallsDimensionsContainer = document.querySelector('.walls-dimensions-container');
 const addWallBtn = document.getElementById('add-wall-btn');
@@ -49,11 +49,9 @@ calculateBtn.addEventListener('click', (event) => {
       wallHeight = feetToMeters(wallHeight);
     }
     totalWallsSurface += calculateSurface(wallWidth, wallHeight);
-    console.log(totalWallsSurface);
   });
 
-  console.log(totalWallsSurface);
-  const rollSurface = rollWidth * rollLength;
+  const rollSurface = calculateSurface(rollWidth, rollLength);
   const rollsNeeded = Math.ceil(totalWallsSurface / rollSurface);
   result.innerHTML = rollsNeeded;
 });
@@ -65,9 +63,8 @@ resetBtn.addEventListener('click', (event) => {
   wallsDimensionsContainer.innerHTML = wallsDimensionsHtml(numberOfWalls);
   calculatorForm.querySelector('#meters').checked = true;
   calculatorForm.querySelector('#feets').checked = false;
-  calculatorForm.querySelector('#wall-width').value = null;
-  calculatorForm.querySelector('#wall-height').value = null;
-  calculatorForm.querySelector('#roll-width').value = calculatorForm.querySelector('#roll-width option:first-child').value;
+  const firstRollsOption = calculatorForm.querySelector('#roll-width option:first-child').value;
+  calculatorForm.querySelector('#roll-width').value = firstRollsOption;
 });
 
 
