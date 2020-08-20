@@ -15,15 +15,16 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <title>Hello, world!</title>
+    <title>Wallpaper Calculator</title>
   </head>
   <body>
     <div class="container mt-5">
       <h1>Wallpaper Calculator</h1>
       <form id="wallpaper-calculator">
+        <div class="form-title">Please check the dimensions of your wallpaper</div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="roll-width">Roll Width in cm</label>
+            <label for="roll-width">Roll width in cm</label>
             <select name="roll-width" id="roll-width" class="form-control">
               <option value="52">52</option>
               <option value="70">70</option>
@@ -37,17 +38,17 @@
           </div>
         </div>
         <div class="form-group">
-          <div>Unit of Measurement</div>
+          <div class="form-title">Select a unit of measurement</div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="meters" value="meters" checked>
-            <label class="form-check-label" for="inlineRadio1">Meters</label>
+            <input class="form-check-input" type="radio" name="measurement-unit" id="meters" value="meters" checked>
+            <label class="form-check-label" for="meters">Meters</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="feets" value="feets">
-            <label class="form-check-label" for="inlineRadio2">Feet & Inches</label>
+            <input class="form-check-input" type="radio" name="measurement-unit" id="feets" value="feets">
+            <label class="form-check-label" for="feets">Feet & Inches</label>
           </div>
         </div>
-        <div>Wall Dimensions</div>
+        <div class="form-title">Add your wall(s) dimensions</div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="wall-width">Width in meters</label>
@@ -58,8 +59,14 @@
             <input type="number" min="0" class="form-control" id="wall-height">
           </div>
         </div>
-        <button type="submit" class="btn btn-primary" id="reset-btn">Reset</button>
-        <button type="submit" class="btn btn-primary" id="calculate-btn">Calculate Rolls Needed</button>
+        <div class="form-row">
+          <div class="form-group col-md-1">
+            <button type="submit" class="btn btn-secondary" id="reset-btn">RESET</button>
+          </div>
+          <div class="form-group col-md-11">
+            <button type="submit" class="btn btn-primary w-100" id="calculate-btn">CALCULATE ROLLS NEEDED</button>
+          </div>
+        </div>
       </form>
       <div id="result">Rolls Needed: <span></span></div>
     </div>
