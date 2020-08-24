@@ -1,7 +1,7 @@
 const calculatorForm = document.getElementById('wallpaper-calculator');
 const calculateBtn = document.getElementById('calculate-btn');
 const resetBtn = document.getElementById('reset-btn');
-const result = document.querySelector('#result span');
+const result = document.querySelector('#result');
 const wallsDimensionsContainer = document.querySelector('.walls-dimensions-container');
 const addWallBtn = document.getElementById('add-wall-btn');
 let numberOfWalls = 1;
@@ -51,9 +51,10 @@ calculateBtn.addEventListener('click', (event) => {
     totalWallsSurface += calculateSurface(wallWidth, wallHeight);
   });
 
+  const totalWallsSurfaceWithErrorMargin = totalWallsSurface * 1.1;
   const rollSurface = calculateSurface(rollWidth, rollLength);
-  const rollsNeeded = Math.ceil(totalWallsSurface / rollSurface);
-  result.innerHTML = rollsNeeded;
+  const rollsNeeded = Math.ceil(totalWallsSurfaceWithErrorMargin / rollSurface);
+  result.innerHTML = `We estimate you’ll need <b>${rollsNeeded}</b> rolls of our wallpaper to cover <b>${totalWallsSurface}</b> square m of wall.`;
 });
 
 resetBtn.addEventListener('click', (event) => {
