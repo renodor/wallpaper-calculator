@@ -17,11 +17,11 @@ const calculateSurface = (width, height) => {
 const wallsDimensionsHtml = (id) => {
   return `<div class="form-row walls-dimensions">
     <div class="form-group col-md-6">
-      <label for="wall-width">Width in meters</label>
+      <label for="wall-width">Width in metres</label>
       <input type="number" min="0" class="form-control wall-width" id="wall-width-${id}">
     </div>
     <div class="form-group col-md-6">
-      <label for="wall-height">Height in meters</label>
+      <label for="wall-height">Height in metres</label>
       <input type="number" min="0" class="form-control wall-height" id="wall-height-${id}">
     </div>
   </div>`;
