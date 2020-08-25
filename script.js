@@ -37,17 +37,17 @@ calculateBtn.addEventListener('click', (event) => {
   event.preventDefault();
   const rollWidth = calculatorForm.querySelector('#roll-width').value / 100;
   const rollLength = calculatorForm.querySelector('#roll-length').value;
-  const feets = calculatorForm.querySelector('#feets').checked;
+  // const feets = calculatorForm.querySelector('#feets').checked;
   const wallsDimensions = calculatorForm.querySelectorAll('.walls-dimensions');
   let totalWallsSurface = 0;
 
   wallsDimensions.forEach((wallDimension) => {
     let wallWidth = wallDimension.querySelector('.wall-width').value;
     let wallHeight = wallDimension.querySelector('.wall-height').value;
-    if (feets) {
-      wallWidth = feetToMeters(wallWidth);
-      wallHeight = feetToMeters(wallHeight);
-    }
+    // if (feets) {
+    //   wallWidth = feetToMeters(wallWidth);
+    //   wallHeight = feetToMeters(wallHeight);
+    // }
     totalWallsSurface += calculateSurface(wallWidth, wallHeight);
   });
 
@@ -55,6 +55,7 @@ calculateBtn.addEventListener('click', (event) => {
   const rollSurface = calculateSurface(rollWidth, rollLength);
   const rollsNeeded = Math.ceil(totalWallsSurfaceWithErrorMargin / rollSurface);
   result.innerHTML = `We estimate you’ll need <b>${rollsNeeded}</b> rolls of our wallpaper to cover <b>${totalWallsSurface}</b> square m of wall.`;
+  console.log(totalWallsSurfaceWithErrorMargin);
 });
 
 resetBtn.addEventListener('click', (event) => {
