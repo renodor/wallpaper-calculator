@@ -20,7 +20,7 @@ modalBtn.addEventListener('click', (event) => {
 
 closeModalBtns.forEach((closeModalBtn) => {
   closeModalBtn.addEventListener('click', (event) => {
-    closeModal()
+    closeModal();
   });
 });
 
