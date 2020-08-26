@@ -81,8 +81,13 @@
   #wallpaper-calculator-container {
     flex-direction: column;
   }
+
   #wallpaper-calculator-container #wallpaper-calculator,
   #wallpaper-calculator-container .description {
     width: 100%;
+  }
+
+  .wallpaper-calculator-section .section-counter {
+    left: -10px;
   }
 }
