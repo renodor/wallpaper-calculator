@@ -51,10 +51,14 @@ calculateBtn.addEventListener('click', (event) => {
     totalWallsSurface += calculateSurface(wallWidth, wallHeight);
   });
 
-  const totalWallsSurfaceWithErrorMargin = totalWallsSurface * 1.1;
-  const rollSurface = calculateSurface(rollWidth, rollLength);
-  const rollsNeeded = Math.ceil(totalWallsSurfaceWithErrorMargin / rollSurface);
-  result.innerHTML = `We estimate you’ll need <b>${rollsNeeded}</b> rolls of our wallpaper to cover <b>${totalWallsSurface}</b> square meters of wall.`;
+  if (totalWallsSurface != 0) {
+    const totalWallsSurfaceWithErrorMargin = totalWallsSurface * 1.1;
+    const rollSurface = calculateSurface(rollWidth, rollLength);
+    const rollsNeeded = Math.ceil(totalWallsSurfaceWithErrorMargin / rollSurface);
+    result.innerHTML = `We estimate you’ll need <b>${rollsNeeded}</b> rolls of our wallpaper to cover <b>${totalWallsSurface}</b> square meters of wall.`;
+  } else {
+    result.innerHTML = `Please enter your wall(s) dimensions`;
+  }
 });
 
 resetBtn.addEventListener('click', (event) => {
