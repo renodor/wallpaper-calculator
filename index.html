@@ -6,102 +6,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Font Awesome -->
-    <!-- <script src="https://kit.fontawesome.com/ae46c9edb9.js" crossorigin="anonymous"></script> -->
-
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style/style.css">
 
     <title>Wallpaper Calculator</title>
   </head>
   <body>
-    <div class="container mt-5">
-      <h1>Wallpaper Calculator</h1>
-      <div id="wallpaper-calculator-container">
-        <form id="wallpaper-calculator">
-          <div class="wallpaper-calculator-section">
-            <div class="section-counter">1</div>
-            <h2>Please check the dimensions of your wallpaper</h2>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="roll-width">Roll width in Cm</label>
-                <select name="roll-width" id="roll-width" class="form-control">
-                  <option value="52">52</option>
-                  <option value="70">70</option>
-                  <option value="100">100</option>
-                  <option value="140">140</option>
-                </select>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="roll-length">Roll Length in Metres</label>
-                <input type="text" class="form-control" id="roll-length" value="10.05" readonly>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="form-group">
-            <div class="form-title">Select a unit of measurement</div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="measurement-unit" id="meters" value="meters" checked>
-              <label class="form-check-label" for="meters">Metres</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="measurement-unit" id="feets" value="feets">
-              <label class="form-check-label" for="feets">Feet & Inches</label>
-            </div>
-          </div> -->
-          <div class="wallpaper-calculator-section">
-            <div class="section-counter">2</div>
-            <h2>Add your wall(s) dimensions</h2>
-            <div class="walls-dimensions-container">
-              <div class="form-row walls-dimensions">
-                <div class="form-group col-md-6">
-                  <label for="wall-width">Width in Metres</label>
-                  <input type="number" min="0" class="form-control wall-width" id="wall-width-1">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="wall-height">Height in Metres</label>
-                  <input type="number" min="0" class="form-control wall-height" id="wall-height-1">
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" id="wallpaper-calculator-modal-btn" data-target="#wallpaper-calculator-modal">
+    Click here to estimate how many rolls of wallpaper your project will require
+  </button>
+
+  <!-- Modal -->
+  <div class="renodor-modal" id="wallpaper-calculator-modal" style="display: none;">
+    <div class="modal-container">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="wallpaper-calculator-modal">Wallpaper Calculator</h5>
+          <button type="button" class="close-modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="wallpaper-calculator-container">
+            <form id="wallpaper-calculator">
+              <div class="wallpaper-calculator-section">
+                <div class="section-counter">1</div>
+                <h2>Please check the dimensions of your wallpaper</h2>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="roll-width">Roll width in Cm</label>
+                    <select name="roll-width" id="roll-width" class="form-control">
+                      <option value="52">52</option>
+                      <option value="70">70</option>
+                      <option value="100">100</option>
+                      <option value="140">140</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="roll-length">Roll Length in Metres</label>
+                    <input type="text" class="form-control" id="roll-length" value="10.05" readonly>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="add-wall-container">
-              <button class="btn" id="add-wall-btn">+ ADD ANOTHER WALL</button>
+              <!-- <div class="form-group">
+                <div class="form-title">Select a unit of measurement</div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="measurement-unit" id="meters" value="meters" checked>
+                  <label class="form-check-label" for="meters">Metres</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="measurement-unit" id="feets" value="feets">
+                  <label class="form-check-label" for="feets">Feet & Inches</label>
+                </div>
+              </div> -->
+              <div class="wallpaper-calculator-section">
+                <div class="section-counter">2</div>
+                <h2>Add your wall(s) dimensions</h2>
+                <div class="walls-dimensions-container">
+                  <div class="form-row walls-dimensions">
+                    <div class="form-group col-md-6">
+                      <label for="wall-width">Width in Metres</label>
+                      <input type="number" min="0" class="form-control wall-width" id="wall-width-1">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="wall-height">Height in Metres</label>
+                      <input type="number" min="0" class="form-control wall-height" id="wall-height-1">
+                    </div>
+                  </div>
+                </div>
+                <div class="add-wall-container">
+                  <button class="btn" id="add-wall-btn">+ ADD ANOTHER WALL</button>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-2">
+                  <button class="btn" id="reset-btn">
+                    <img src="assets/images/arrow-counterclockwise.svg" alt="">
+                    RESET
+                  </button>
+                </div>
+                <div class="form-group col-md-10">
+                  <button type="submit" class="btn" id="calculate-btn">
+                    <img src="assets/images/calculator-fill.svg" alt="">
+                    <span>CALCULATE ROLLS NEEDED</span>
+                  </button>
+                </div>
+              </div>
+              <div id="result"></div>
+            </form>
+            <div class="description">
+              <div class="description-top">
+                <h2>Enter your roll and wall dimensions to estimate how many rolls of wallpaper your project will require.</h2>
+                <p>*This calculator provides an approximate roll recommendation only. Eloise Home advise that you always consult your decorator before ordering wallpaper, as we cannot be held responsible for any incorrect quantities of wallpaper ordered. We have allowed for trimming and 10% extra for pattern matching, based on a standard room layout.</p>
+              </div>
+              <img class="wallpaper-calculator-background" src="assets/images/wallpaper-calculator-background.png" alt="">
             </div>
           </div>
-          <div class="form-row">
-            <div class="form-group col-md-2">
-              <button class="btn" id="reset-btn">
-                <img src="arrow-counterclockwise.svg" alt="">
-                RESET
-              </button>
-            </div>
-            <div class="form-group col-md-10">
-              <button type="submit" class="btn" id="calculate-btn">
-                <img src="calculator-fill.svg" alt="">
-                <span>CALCULATE ROLLS NEEDED</span>
-              </button>
-            </div>
-          </div>
-          <div id="result"></div>
-        </form>
-        <div class="description">
-          <div class="description-top">
-            <h2>Enter your roll and wall dimensions to estimate how many rolls of wallpaper your project will require.</h2>
-            <p>*This calculator provides an approximate roll recommendation only. Eloise Home advise that you always consult your decorator before ordering wallpaper, as we cannot be held responsible for any incorrect quantities of wallpaper ordered. We have allowed for trimming and 10% extra for pattern matching, based on a standard room layout.</p>
-          </div>
-          <img class="wallpaper-calculator-background" src="wallpaper-calculator-background.png" alt="">
         </div>
       </div>
-
     </div>
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+  </div>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/script.js"></script>
   </body>
 </html>

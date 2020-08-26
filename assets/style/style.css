@@ -1,3 +1,13 @@
+@import url(modal.css);
+
+#wallpaper-calculator-modal .modal-dialog {
+  max-width: 1000px;
+}
+
+ #wallpaper-calculator-modal .modal-header .close span {
+  font-size: 2.5rem;
+}
+
 #wallpaper-calculator-container {
   display: flex;
 }
@@ -89,5 +99,11 @@
 
   .wallpaper-calculator-section .section-counter {
     left: -10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #wallpaper-calculator-modal .modal-dialog {
+    margin: 10px;
   }
 }
