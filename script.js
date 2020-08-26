@@ -54,7 +54,7 @@ calculateBtn.addEventListener('click', (event) => {
   const totalWallsSurfaceWithErrorMargin = totalWallsSurface * 1.1;
   const rollSurface = calculateSurface(rollWidth, rollLength);
   const rollsNeeded = Math.ceil(totalWallsSurfaceWithErrorMargin / rollSurface);
-  result.innerHTML = `We estimate you’ll need <b>${rollsNeeded}</b> rolls of our wallpaper to cover <b>${totalWallsSurface}</b> square m of wall.`;
+  result.innerHTML = `We estimate you’ll need <b>${rollsNeeded}</b> rolls of our wallpaper to cover <b>${totalWallsSurface}</b> square meters of wall.`;
   console.log(totalWallsSurfaceWithErrorMargin);
 });
 

@@ -18,62 +18,82 @@
     <title>Wallpaper Calculator</title>
   </head>
   <body>
-    <div class="container mt-5">
+    <div class="container mt-5" id="wallpaper-calculator-container">
       <h1>Wallpaper Calculator</h1>
-      <form id="wallpaper-calculator">
-        <div class="form-title">Please check the dimensions of your wallpaper</div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="roll-width">Roll width in Cm</label>
-            <select name="roll-width" id="roll-width" class="form-control">
-              <option value="52">52</option>
-              <option value="70">70</option>
-              <option value="100">100</option>
-              <option value="140">140</option>
-            </select>
-          </div>
-          <div class="form-group col-md-6">
-            <label for="roll-length">Roll Length in Metres</label>
-            <input type="text" class="form-control" id="roll-length" value="10.05" readonly>
-          </div>
-        </div>
-<!--         <div class="form-group">
-          <div class="form-title">Select a unit of measurement</div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="measurement-unit" id="meters" value="meters" checked>
-            <label class="form-check-label" for="meters">Metres</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="measurement-unit" id="feets" value="feets">
-            <label class="form-check-label" for="feets">Feet & Inches</label>
-          </div>
-        </div> -->
-        <div class="form-title">Add your wall(s) dimensions</div>
-        <div class="walls-dimensions-container">
-          <div class="form-row walls-dimensions">
-            <div class="form-group col-md-6">
-              <label for="wall-width">Width in Metres</label>
-              <input type="number" min="0" class="form-control wall-width" id="wall-width-1">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="wall-height">Height in Metres</label>
-              <input type="number" min="0" class="form-control wall-height" id="wall-height-1">
+      <div class="d-flex">
+        <form id="wallpaper-calculator">
+          <div class="wallpaper-calculator-section">
+            <div class="section-counter">1</div>
+            <h2>Please check the dimensions of your wallpaper</h2>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="roll-width">Roll width in Cm</label>
+                <select name="roll-width" id="roll-width" class="form-control">
+                  <option value="52">52</option>
+                  <option value="70">70</option>
+                  <option value="100">100</option>
+                  <option value="140">140</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="roll-length">Roll Length in Metres</label>
+                <input type="text" class="form-control" id="roll-length" value="10.05" readonly>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="add-wall-container">
-          <button class="btn btn-light" id="add-wall-btn">+ ADD ANOTHER WALL</button>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-1">
-            <button class="btn btn-secondary" id="reset-btn">RESET</button>
+          <!-- <div class="form-group">
+            <div class="form-title">Select a unit of measurement</div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="measurement-unit" id="meters" value="meters" checked>
+              <label class="form-check-label" for="meters">Metres</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="measurement-unit" id="feets" value="feets">
+              <label class="form-check-label" for="feets">Feet & Inches</label>
+            </div>
+          </div> -->
+          <div class="wallpaper-calculator-section">
+            <div class="section-counter">2</div>
+            <h2>Add your wall(s) dimensions</h2>
+            <div class="walls-dimensions-container">
+              <div class="form-row walls-dimensions">
+                <div class="form-group col-md-6">
+                  <label for="wall-width">Width in Metres</label>
+                  <input type="number" min="0" class="form-control wall-width" id="wall-width-1">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="wall-height">Height in Metres</label>
+                  <input type="number" min="0" class="form-control wall-height" id="wall-height-1">
+                </div>
+              </div>
+            </div>
+            <div class="add-wall-container">
+              <button class="btn" id="add-wall-btn">+ ADD ANOTHER WALL</button>
+            </div>
           </div>
-          <div class="form-group col-md-11">
-            <button type="submit" class="btn btn-primary w-100" id="calculate-btn">CALCULATE ROLLS NEEDED</button>
+          <div class="form-row">
+            <div class="form-group col-md-2">
+              <button class="btn" id="reset-btn">
+                <img src="arrow-counterclockwise.svg" alt="">
+                RESET
+              </button>
+            </div>
+            <div class="form-group col-md-10">
+              <button type="submit" class="btn" id="calculate-btn">
+                <img src="calculator-fill.svg" alt="">
+                <span>CALCULATE ROLLS NEEDED</span>
+              </button>
+            </div>
           </div>
+          <div id="result"></div>
+        </form>
+        <div class="description">
+          <h2>Enter your roll and wall dimensions to estimate how many rolls of wallpaper your project will require.</h2>
+          <p>*This calculator provides an approximate roll recommendation only. Eloise Home advise that you always consult your decorator before ordering wallpaper, as we cannot be held responsible for any incorrect quantities of wallpaper ordered. We have allowed for trimming and 10% extra for pattern matching, based on a standard room layout.</p>
         </div>
-      </form>
-      <div id="result"></div>
+
+      </div>
+
     </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

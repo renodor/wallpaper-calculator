@@ -1,24 +1,59 @@
-.form-title {
-  font-size: 30px;
-  text-transform: uppercase;
-  color: gray;
-  margin: 10px 0;
+#wallpaper-calculator-container #wallpaper-calculator {
+  width: 60%;
 }
 
-#result {
-  margin-top: 20px;
+#wallpaper-calculator-container .description {
+  width: 40%;
+}
+
+#wallpaper-calculator .wallpaper-calculator-section {
+  position: relative;
+  background-color: #F4F4F4;
+  padding: 20px 20px 20px 30px;
+  margin-bottom: 10px;
+}
+
+.wallpaper-calculator-section .section-counter {
+  background-color: #306F21;
+  position: absolute;
+  left: -20px;
+  padding: 5px 13px;
+  color: white;
+}
+
+#wallpaper-calculator .form-control {
+  border-radius: 0;
+}
+
+#wallpaper-calculator #result {
   padding: 15px;
   font-size: 20px;
   text-align: center;
-  background-color: #e4e4e4;
+  background-color: #F4F4F4;
+  border: 1px solid #306F21;
 }
 
-#result span {
+#wallpaper-calculator #result span {
   font-weight: bolder;
 }
 
-.add-wall-container {
+#wallpaper-calculator .add-wall-container {
   display: flex;
   justify-content: flex-end;
   margin: 10px 0;
+}
+
+#wallpaper-calculator #reset-btn {
+  background-color: #F4F4F4;
+  padding: 10px;
+  width: 100%;
+  border-radius: 0;
+}
+
+#wallpaper-calculator #calculate-btn {
+  width: 100%;
+  border-radius: 0;
+  background-color: #306F21;
+  color: white;
+  padding: 10px;
 }
