@@ -2,10 +2,6 @@
   width: 60%;
 }
 
-#wallpaper-calculator-container .description {
-  width: 40%;
-}
-
 #wallpaper-calculator .wallpaper-calculator-section {
   position: relative;
   background-color: #F4F4F4;
@@ -50,10 +46,29 @@
   border-radius: 0;
 }
 
+#wallpaper-calculator #reset-btn img {
+  margin-bottom: 2px;
+}
+
 #wallpaper-calculator #calculate-btn {
   width: 100%;
   border-radius: 0;
   background-color: #306F21;
   color: white;
   padding: 10px;
+}
+
+#wallpaper-calculator #calculate-btn img {
+  margin-bottom: 3px;
+}
+
+#wallpaper-calculator-container .description {
+  width: 40%;
+}
+
+#wallpaper-calculator-container .description .description-top {
+  padding: 15px;
+}
+#wallpaper-calculator-container .description .wallpaper-calculator-background {
+  height: 100px;
 }
