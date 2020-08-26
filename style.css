@@ -1,3 +1,6 @@
+#wallpaper-calculator-container {
+  display: flex;
+}
 #wallpaper-calculator-container #wallpaper-calculator {
   width: 60%;
 }
@@ -71,4 +74,15 @@
 }
 #wallpaper-calculator-container .description .wallpaper-calculator-background {
   height: 100px;
+}
+
+
+@media (max-width: 767px) {
+  #wallpaper-calculator-container {
+    flex-direction: column;
+  }
+  #wallpaper-calculator-container #wallpaper-calculator,
+  #wallpaper-calculator-container .description {
+    width: 100%;
+  }
 }
