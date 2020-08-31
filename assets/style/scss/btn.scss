@@ -1,0 +1,26 @@
+.btn {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5em;
+  border-radius: 1px;
+  color: $dark-gray;
+  border: none;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+  &.btn-primary {
+    color: white;
+    background-color: $green;
+    &:focus {
+      outline: none;
+    }
+  }
+  &.btn-secondary {
+    background-color: $light-gray;
+  }
+}
