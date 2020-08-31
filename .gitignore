@@ -1,5 +1,5 @@
 /node_modules
 yarn-error.log
 .sass-cache/*
-/style/.sass-cache/
-/style/scs/.sass-cache/
+style/.sass-cache/
+style/scs/.sass-cache/
