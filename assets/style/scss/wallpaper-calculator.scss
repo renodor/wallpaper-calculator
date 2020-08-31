@@ -2,194 +2,157 @@
 
 #wallpaper-calculator-container {
   display: flex;
+  #wallpaper-calculator {
+    width: 50%;
+    background-color: white;
+    z-index: 1;
+    .wallpaper-calculator-section {
+      position: relative;
+      background-color: #F4F4F4;
+      padding: 20px 10px 20px 30px;
+      margin-bottom: 10px;
+      .section-counter {
+        background-color: #392923;
+        position: absolute;
+        left: -15px;
+        padding: 5px 13px;
+        color: white;
+      }
+      h3 {
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .input-row {
+        display: flex;
+        .input-group {
+          margin-bottom: 20px;
+          margin-right: 20px;
+          width: 50%;
+          label {
+            margin-bottom: 5px;
+            display: inline-block;
+          }
+        }
+      }
+      .add-wall-container {
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px 20px 0 0;
+        #add-wall-btn {
+          padding: 5px 20px;
+          border: 1px solid rgba(150, 150, 150, .5);
+          background-color: transparent;
+          transition: border .2s ease;
+          &:hover {
+            border: 1px solid rgba(150, 150, 150, 1);
+          }
+          span {
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+    .wallpaper-calculator-btns {
+      display: flex;
+      margin-bottom: 10px;
+      #reset-btn {
+        background-color: #F4F4F4;
+        margin-right: 10px;
+        img {
+          margin-bottom: 2px;
+          margin-right: 7px;
+        }
+      }
+      #calculate-btn {
+        flex-grow: 1;
+        img {
+          margin-bottom: 3px;
+          margin-right: 7px;
+        }
+      }
+    }
+    #result {
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      background-color: #F4F4F4;
+      border: 1px solid #392923;
+      span {
+        font-weight: bolder;
+      }
+    }
+  }
+  .description {
+    width: 50%;
+    .description-top {
+      padding: 0 15px 15px 15px;
+      h3 {
+        margin-top: 0;
+        font-size: 25px;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #eee;
+      }
+    }
+    .wallpaper-calculator-background {
+      height: 250px;
+      margin-left: -100px;
+    }
+  }
 }
-
-#wallpaper-calculator-container #wallpaper-calculator {
-  width: 50%;
-  background-color: white;
-  z-index: 1;
-}
-
-#wallpaper-calculator .wallpaper-calculator-section {
-  position: relative;
-  background-color: #F4F4F4;
-  padding: 20px 10px 20px 30px;
-  margin-bottom: 10px;
-}
-
-.wallpaper-calculator-section .section-counter {
-  background-color: var(--color-accent)#392923;
-  position: absolute;
-  left: -15px;
-  padding: 5px 13px;
-  color: white;
-}
-
-.wallpaper-calculator-section h3 {
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-
-#wallpaper-calculator .input-row {
-  display: flex;
-}
-
-#wallpaper-calculator .input-group {
-  margin-bottom: 20px;
-  margin-right: 20px;
-  width: 50%;
-}
-
-#wallpaper-calculator .wallpaper-calculator-section .input-group label {
-  margin-bottom: 5px;
-  display: inline-block;
-}
-
-#wallpaper-calculator .wallpaper-calculator-btns {
-  display: flex;
-  margin-bottom: 10px;
-}
-
-
-#wallpaper-calculator #result {
-  padding: 15px;
-  font-size: 20px;
-  text-align: center;
-  background-color: #F4F4F4;
-  border: 1px solid #392923;
-}
-
-#wallpaper-calculator #result span {
-  font-weight: bolder;
-}
-
-#wallpaper-calculator .add-wall-container {
-  display: flex;
-  justify-content: flex-end;
-  margin: 10px 20px 0 0;
-}
-
-#wallpaper-calculator .add-wall-container #add-wall-btn {
-  padding: 5px 20px;
-  border: 1px solid rgba(150, 150, 150, .5);
-  background-color: transparent;
-  transition: border .2s ease
-}
-
-#wallpaper-calculator .add-wall-container #add-wall-btn:hover {
-  border: 1px solid rgba(150, 150, 150, 1);
-}
-
-
-#wallpaper-calculator .add-wall-container #add-wall-btn span {
-  font-weight: bolder;
-}
-
-#wallpaper-calculator #reset-btn {
-  background-color: #F4F4F4;
-  margin-right: 10px;
-}
-
-#wallpaper-calculator #reset-btn img {
-  margin-bottom: 2px;
-  margin-right: 7px;
-}
-
-#wallpaper-calculator #calculate-btn {
-  flex-grow: 1;
-}
-
-#wallpaper-calculator #calculate-btn img {
-  margin-bottom: 3px;
-  margin-right: 7px;
-}
-
-#wallpaper-calculator-container .description {
-  width: 50%;
-}
-
-#wallpaper-calculator-container .description .description-top {
-  padding: 0 15px 15px 15px;
-}
-
-#wallpaper-calculator-container .description .description-top h3 {
-  margin-top: 0;
-  font-size: 25px;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-#wallpaper-calculator-container .description .wallpaper-calculator-background {
-  height: 250px;
-  margin-left: -100px;
-}
-
 
 @media (max-width: 767px) {
-  #wallpaper-calculator .wallpaper-calculator-section {
-    padding: 20px 20px 20px 30px;
-  }
-
-  .wallpaper-calculator-section .section-counter {
-    left: -10px;
-  }
-
-  #wallpaper-calculator .wallpaper-calculator-section h3 {
-    margin-top: 0;
-  }
-
-  #wallpaper-calculator .input-row {
-    flex-direction: column;
-  }
-
-  #wallpaper-calculator .input-group {
-    margin-bottom: 20px;
-    margin-right: 0;
-    width: 100%;
-  }
-
-  #wallpaper-calculator .walls-dimensions {
-    border-bottom: 1px solid #d1d1d1;
-    margin-bottom: 10px;
-  }
-
-  #wallpaper-calculator .walls-dimensions:last-child {
-    border-bottom: none;
-  }
-
-  #wallpaper-calculator .add-wall-container {
-    margin: 0;
-  }
-
-  #wallpaper-calculator .add-wall-container #add-wall-btn {
-    width: 100%;
-  }
-
-  #wallpaper-calculator .wallpaper-calculator-btns {
-    flex-direction: column;
-  }
-
-  #wallpaper-calculator #reset-btn {
-    width: 100%;
-    margin-bottom: 10px;
+  #wallpaper-calculator {
+    .wallpaper-calculator-section {
+      padding: 20px 20px 20px 30px;
+      .section-counter {
+        left: -10px;
+      }
+      h3 {
+        margin-top: 0;
+      }
+      .input-row {
+        flex-direction: column;
+        .input-group {
+          margin-bottom: 20px;
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+      .walls-dimensions {
+        border-bottom: 1px solid #d1d1d1;
+        margin-bottom: 10px;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .add-wall-container {
+        margin: 0;
+        #add-wall-btn {
+          width: 100%;
+        }
+      }
+    }
+    .wallpaper-calculator-btns {
+      flex-direction: column;
+      #reset-btn {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 
 @media (max-width: 991px) {
   #wallpaper-calculator-container {
     flex-direction: column;
-  }
-
-  #wallpaper-calculator-container #wallpaper-calculator,
-  #wallpaper-calculator-container .description {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  #wallpaper-calculator-container .description .wallpaper-calculator-background {
-    margin-left: 0;
+    #wallpaper-calculator, .description {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .description .wallpaper-calculator-background {
+      margin-left: 0;
+    }
   }
 }
 
