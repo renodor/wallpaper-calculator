@@ -1,2 +1,12 @@
+@import 'color';
 @import 'modal';
 @import 'wallpaper-calculator';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: $dark-gray;
+}

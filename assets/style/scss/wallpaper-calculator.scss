@@ -12,13 +12,14 @@
       padding: 20px 10px 20px 30px;
       margin-bottom: 10px;
       .section-counter {
-        background-color: #392923;
+        background-color: $green;
         position: absolute;
         left: -15px;
         padding: 5px 13px;
         color: white;
       }
       h3 {
+        margin-top: 0;
         text-transform: uppercase;
         font-weight: 500;
       }
@@ -31,6 +32,33 @@
           label {
             margin-bottom: 5px;
             display: inline-block;
+          }
+          input, select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: white;
+            width: 100%;
+            font-size: 16px;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+            border: none;
+            border-radius: 3px;
+            padding: 15px 10px;
+          }
+          .select-wrapper {
+            position: relative;
+            &:after {
+              content: ' ';
+              pointer-events: none;
+              width: 0;
+              height: 0;
+              border-left: 6px solid transparent;
+              border-right: 6px solid transparent;
+              border-top: 6px solid $dark-gray;
+              position: absolute;
+              top: 50%;
+              margin-top: -3px;
+              right: 15px;
+            }
           }
         }
       }
@@ -64,6 +92,7 @@
         }
       }
       #calculate-btn {
+        background-color: $green;
         flex-grow: 1;
         img {
           margin-bottom: 3px;
@@ -76,7 +105,7 @@
       font-size: 20px;
       text-align: center;
       background-color: #F4F4F4;
-      border: 1px solid #392923;
+      border: 1px solid $green;
       span {
         font-weight: bolder;
       }
