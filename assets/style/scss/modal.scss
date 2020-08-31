@@ -1,11 +1,14 @@
 #wallpaper-calculator-modal-btn {
   padding: 10px;
-  background-color: transparent;
-  margin-bottom: 10px;
+  background-color: $light-gray;
+  color: $dark-gray;
+  margin: 100px auto 10px auto;
   border: 1px solid rgba(0, 0, 0, .3);
-  transition: border .2s ease;
+  opacity: 0.8;
+  transition: opacity .2s ease;
+  width: 300px;
   &:hover {
-    border: 1px solid black;
+    opacity: 1;
   }
 }
 
@@ -41,6 +44,7 @@
           flex-grow: 1;
         }
         .close-modal {
+          cursor: pointer;
           background-color: transparent;
           color: black;
           font-size: 50px;
