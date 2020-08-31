@@ -1,0 +1,115 @@
+@import url(modal.css);
+.renodor-modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  justify-content: center;
+  align-items: center; }
+
+.renodor-modal .modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 3px; }
+
+.renodor-modal .modal-header {
+  display: flex; }
+
+.renodor-modal .modal-header .modal-title {
+  flex-grow: 1; }
+
+#wallpaper-calculator-modal .modal-dialog {
+  max-width: 1000px; }
+
+#wallpaper-calculator-modal .modal-header .close span {
+  font-size: 2.5rem; }
+
+#wallpaper-calculator-container {
+  display: flex; }
+
+#wallpaper-calculator-container #wallpaper-calculator {
+  width: 60%; }
+
+#wallpaper-calculator .wallpaper-calculator-section {
+  position: relative;
+  background-color: #F4F4F4;
+  padding: 20px 20px 20px 30px;
+  margin-bottom: 10px; }
+
+.wallpaper-calculator-section .section-counter {
+  background-color: #306F21;
+  position: absolute;
+  left: -20px;
+  padding: 5px 13px;
+  color: white; }
+
+#wallpaper-calculator .form-control {
+  border-radius: 0; }
+
+#wallpaper-calculator #result {
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #F4F4F4;
+  border: 1px solid #306F21; }
+
+#wallpaper-calculator #result span {
+  font-weight: bolder; }
+
+#wallpaper-calculator .add-wall-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0; }
+
+#wallpaper-calculator #reset-btn {
+  background-color: #F4F4F4;
+  padding: 10px;
+  width: 100%;
+  border-radius: 0; }
+
+#wallpaper-calculator #reset-btn img {
+  margin-bottom: 2px; }
+
+#wallpaper-calculator #calculate-btn {
+  width: 100%;
+  border-radius: 0;
+  background-color: #306F21;
+  color: white;
+  padding: 10px; }
+
+#wallpaper-calculator #calculate-btn img {
+  margin-bottom: 3px; }
+
+#wallpaper-calculator-container .description {
+  width: 40%; }
+
+#wallpaper-calculator-container .description .description-top {
+  padding: 15px; }
+
+#wallpaper-calculator-container .description .wallpaper-calculator-background {
+  height: 100px; }
+
+@media (max-width: 767px) {
+  #wallpaper-calculator-container {
+    flex-direction: column; }
+
+  #wallpaper-calculator-container #wallpaper-calculator,
+  #wallpaper-calculator-container .description {
+    width: 100%; }
+
+  .wallpaper-calculator-section .section-counter {
+    left: -10px; } }
+@media (max-width: 1000px) {
+  #wallpaper-calculator-modal .modal-dialog {
+    margin: 10px; } }
+
+/*# sourceMappingURL=index.css.map */
