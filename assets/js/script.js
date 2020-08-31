@@ -15,16 +15,16 @@ const calculateSurface = (width, height) => {
 };
 
 const wallsDimensionsHtml = (id) => {
-  return `<div class="form-row walls-dimensions">
-    <div class="form-group col-md-6">
-      <label for="wall-width">Width in metres</label>
-      <input type="number" min="0" class="form-control wall-width" id="wall-width-${id}">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="wall-height">Height in metres</label>
-      <input type="number" min="0" class="form-control wall-height" id="wall-height-${id}">
-    </div>
-  </div>`;
+  return `<div class="input-row walls-dimensions">
+            <div class="input-group">
+              <label for="wall-width">Width in Metres</label>
+              <input type="number" min="0" class="input input-reset wall-width" id="wall-width-1">
+            </div>
+            <div class="input-group">
+              <label for="wall-height">Height in Metres</label>
+              <input type="number" min="0" class="input input-reset wall-height" id="wall-height-1">
+            </div>
+          </div>`;
 };
 
 addWallBtn.addEventListener('click', (event) => {
